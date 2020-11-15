@@ -1,17 +1,13 @@
-import gamePieces.blacks.BlackKing;
-import grid.Grid;
+import gameManagers.Game;
+
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Grid gamingBoard = new Grid();
+        Game game = new Game();
 
-        gamingBoard.drawBoard();
 
-        BlackKing blackKing = new BlackKing();
-
-        blackKing.drawKing(3,7);
 
     }
 
