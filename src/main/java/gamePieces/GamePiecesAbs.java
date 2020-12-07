@@ -2,8 +2,8 @@ package gamePieces;
 
 public abstract class GamePiecesAbs {
 
-    public final int cellSize = 90;
-    public final int center = 15;
+    public final double cellSize = 90;
+    public final double center = 15;
 
 
 }

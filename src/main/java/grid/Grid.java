@@ -22,6 +22,7 @@ public class Grid {
         }
     }
 
+
     public Color cellColor (int i, int j) {
         if( (i+j) % 2 != 0){
             return Color.GRAY;

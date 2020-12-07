@@ -5,14 +5,14 @@ public interface GamePieces {
 
      void showPossibleMoves();
 
-     void move(int targetCol, int targetRow);
+     void move(double targetCol, double targetRow);
 
-     void eat(int col, int row);
+     void eat(double col, double row);
 
      void beEaten();
 
-     int getCol ();
+     double getCol ();
 
-     int getRow();
+     double getRow();
 
 }

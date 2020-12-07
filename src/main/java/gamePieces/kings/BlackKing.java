@@ -5,14 +5,14 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class BlackKing implements GamePieces {
 
-    private final int cellSize = 90;
-    private final int center = 15;
+    private final double cellSize = 90;
+    private final double center = 15;
     private final String location = "src/main/resources/BlackKing.png";
-    private int row;
-    private int col;
+    private double row;
+    private double col;
     private Picture blackKing;
 
-    public BlackKing (int col, int row){
+    public BlackKing (double col, double row){
         Picture blackKing = new Picture(col* cellSize + center, row * cellSize + center, location);
         blackKing.draw();
         this.row = row;
@@ -26,9 +26,9 @@ public class BlackKing implements GamePieces {
     }
 
     @Override
-    public void move(int targetCol, int targetRow) {
-        int moveToCol;
-        int moveToRow;
+    public void move(double targetCol, double targetRow) {
+        double moveToCol;
+        double moveToRow;
 
         if(this.col > targetCol) {
             moveToCol = targetCol *(-1);
@@ -47,7 +47,7 @@ public class BlackKing implements GamePieces {
     }
 
     @Override
-    public void eat(int col, int row) {
+    public void eat(double col, double row) {
 
     }
 
@@ -57,12 +57,12 @@ public class BlackKing implements GamePieces {
     }
 
     @Override
-    public int getCol() {
+    public double getCol() {
       return col;
     }
 
     @Override
-    public int getRow() {
+    public double getRow() {
         return row;
     }
 }

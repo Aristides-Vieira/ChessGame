@@ -7,11 +7,11 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class WhitePawn extends GamePiecesAbs implements GamePieces {
 
     private final String location = "src/main/resources/WhitePawn.png";
-    private int col;
-    private int row;
+    private double col;
+    private double row;
     private Picture whitePawn;
 
-    public WhitePawn(int col, int row) {
+    public WhitePawn(double col, double row) {
         Picture whitePawn = new Picture(col * cellSize + center, row * cellSize + center, location);
         whitePawn.draw();
         this.col = col;
@@ -26,9 +26,9 @@ public class WhitePawn extends GamePiecesAbs implements GamePieces {
     }
 
     @Override
-    public void move(int targetCol, int targetRow) {
-        int moveToCol;
-        int moveToRow;
+    public void move(double targetCol, double targetRow) {
+        double moveToCol;
+        double moveToRow;
 
         if(this.col > targetCol) {
             moveToCol = targetCol *(-1);
@@ -47,7 +47,7 @@ public class WhitePawn extends GamePiecesAbs implements GamePieces {
     }
 
     @Override
-    public void eat(int col, int row) {
+    public void eat(double col, double row) {
 
     }
 
@@ -57,12 +57,12 @@ public class WhitePawn extends GamePiecesAbs implements GamePieces {
     }
 
     @Override
-    public int getCol() {
+    public double getCol() {
         return col;
     }
 
     @Override
-    public int getRow() {
+    public double getRow() {
         return row;
     }
 }
